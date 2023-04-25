@@ -12,8 +12,8 @@ type Data = {
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
- ){
+ ){ 
     const pageInfo: PageInfo[] = await sanityClientMain.fetch(query);
-
+        
     res.status(200).json({ pageInfo })
  }
