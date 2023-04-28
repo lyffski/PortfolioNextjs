@@ -38,7 +38,7 @@ export default function Header({ socials }: Props) {
         ))}
 
         <motion.div className="text-xl pl-3">
-          <a href={"https://lyffski.netlify.app/"}><p className="text-yellow-500">Blog</p></a>
+          <a href={"https://lyffski.netlify.app/"} target="_blank"><p className="text-yellow-500">Blog</p></a>
         </motion.div>
       </motion.div>
 
