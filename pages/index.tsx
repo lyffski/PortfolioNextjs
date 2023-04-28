@@ -23,6 +23,9 @@ type Props = {
 
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   console.log("dd",pageInfo)
+  // const { pageInfo, experiences, skills, projects, socials } = fetchData();
+
+  
   return(
     
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]">
@@ -118,3 +121,26 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   }
 
 } */
+
+// Define an async function to fetch data
+async function fetchData() {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
+  const experiences: Experience[] = await fetchExperiences();
+
+  return {
+    pageInfo,
+    experiences,
+    skills,
+    projects,
+    socials,
+  };
+}
+
+// Call the fetchData function in your page or component
+/* export default function MyPage(props) {
+  const { pageInfo, experiences, skills, projects, socials } = fetchData();
+
+ */
