@@ -20,10 +20,9 @@ type Props = {
   projects: Project[];
   socials: Social[];
 }
-
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
-  console.log("dd",pageInfo)
-  // const { pageInfo, experiences, skills, projects, socials } = fetchData();
+//const Home = () => {
+  //const { pageInfo, experiences, skills, projects, socials } = fetchData();
 
   
   return(
@@ -82,7 +81,6 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
 
 export default Home;
 
-
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const skills: Skill[] = await fetchSkills();
@@ -117,13 +115,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
       socials,  
     },
 
-    revalidate: 10
   }
 
 } */
 
 // Define an async function to fetch data
-async function fetchData() {
+/* async function fetchData() {
   const pageInfo: PageInfo = await fetchPageInfo();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
@@ -137,10 +134,9 @@ async function fetchData() {
     projects,
     socials,
   };
-}
+} */
 
 // Call the fetchData function in your page or component
 /* export default function MyPage(props) {
   const { pageInfo, experiences, skills, projects, socials } = fetchData();
-
  */
