@@ -20,9 +20,9 @@ type Props = {
   projects: Project[];
   socials: Social[];
 }
+
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
-//const Home = () => {
-  //const { pageInfo, experiences, skills, projects, socials } = fetchData();
+  //const { pageInfo, experiences, skills, projects, socials } =  fetchData();
 
   
   return(
@@ -120,7 +120,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 } */
 
 // Define an async function to fetch data
-/* async function fetchData() {
+async function fetchData() {
   const pageInfo: PageInfo = await fetchPageInfo();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
@@ -134,7 +134,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
     projects,
     socials,
   };
-} */
+}
 
 // Call the fetchData function in your page or component
 /* export default function MyPage(props) {
