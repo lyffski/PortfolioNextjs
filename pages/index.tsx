@@ -120,7 +120,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 } */
 
 // Define an async function to fetch data
-async function fetchData() {
+/* async function fetchData() {
   const pageInfo: PageInfo = await fetchPageInfo();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
@@ -134,7 +134,7 @@ async function fetchData() {
     projects,
     socials,
   };
-}
+} */
 
 // Call the fetchData function in your page or component
 /* export default function MyPage(props) {
